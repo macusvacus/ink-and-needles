@@ -19,6 +19,7 @@ export default function BookingPage() {
     details: "",
   });
   const [status, setStatus] = useState<Status>("idle");
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
