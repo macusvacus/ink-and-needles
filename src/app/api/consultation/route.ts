@@ -21,8 +21,8 @@ export async function POST(req: NextRequest) {
 
     // 1. Email to the studio
     await resend.emails.send({
-      from: FROM_EMAIL,
-      to: STUDIO_EMAIL,
+      from: "onboarding@resend.dev",
+      to: "inksneedles4@gmail.com",
       subject: `New Consultation Request from ${name || email}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #09090b; color: #fafafa; padding: 32px; border-radius: 12px;">
@@ -68,8 +68,8 @@ export async function POST(req: NextRequest) {
     // you can only send to your own verified email, so this may fail for other addresses)
     try {
       await resend.emails.send({
-        from: FROM_EMAIL,
-        to: email,
+        from: "onboarding@resend.dev",
+        to: "inksneedles4@gmail.com",
         subject: "We received your consultation request!",
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #09090b; color: #fafafa; padding: 32px; border-radius: 12px;">
