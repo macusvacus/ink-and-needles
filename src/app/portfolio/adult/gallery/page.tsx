@@ -1,4 +1,5 @@
 "use client";
+import { Header } from "@/components/Header";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -39,24 +40,7 @@ export default function AdultGalleryView() {
 
   return (
     <div className="min-h-screen bg-black text-zinc-100 flex flex-col">
-      <header className="border-b border-zinc-800 bg-black/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Inks & Needles Logo" className="h-8 w-auto object-contain" />
-          </Link>
-          <nav className="hidden md:flex gap-8 text-sm font-medium text-zinc-400">
-            <Link href="/artists" className="hover:text-white transition-colors">Artists</Link>
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
-            <Link href="/portfolio/adult" className="text-red-500 font-bold transition-colors">18+ Gallery</Link>
-            <Link href="/booking" className="hover:text-white transition-colors">Booking</Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/booking">
-              <Button className="bg-white text-black hover:bg-zinc-200">Book Now</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1 container mx-auto px-4 py-16">
         <div className="mb-12 border-l-4 border-red-500 pl-6">

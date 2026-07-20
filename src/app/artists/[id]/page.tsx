@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -73,18 +74,7 @@ export default async function ArtistProfilePage({ params }: { params: Promise<{ 
 
   return (
     <div className="min-h-screen bg-black text-zinc-100 flex flex-col">
-      <header className="border-b border-zinc-800 bg-black/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Inks & Needles Logo" className="h-8 w-auto object-contain" />
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link href="/artists">
-              <Button variant="ghost" className="text-zinc-300 hover:text-white hover:bg-zinc-800">Back to Artists</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         {/* Artist Header */}

@@ -1,4 +1,5 @@
 "use client";
+import { Header } from "@/components/Header";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -60,19 +61,7 @@ export default function BookingPage() {
   return (
     <div className="min-h-screen bg-black text-zinc-100 flex flex-col">
       {/* Header */}
-      <header className="border-b border-zinc-800 bg-black/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Inks & Needles Logo" className="h-8 w-auto object-contain" />
-          </Link>
-          <nav className="hidden md:flex gap-8 text-sm font-medium text-zinc-400">
-            <Link href="/artists" className="hover:text-white transition-colors">Artists</Link>
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
-            <Link href="/portfolio/adult" className="text-red-500/70 hover:text-red-500 transition-colors font-semibold">18+ Gallery</Link>
-            <Link href="/booking" className="text-white transition-colors">Booking</Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1 flex items-start justify-center py-16 px-4">
         <div className="w-full max-w-2xl">
