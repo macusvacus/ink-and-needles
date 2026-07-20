@@ -29,17 +29,30 @@ export default function BookingPage() {
     e.preventDefault();
     setStatus("loading");
     try {
-      const res = await fetch("/api/consultation", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: `New Consultation Request from ${form.name || form.email}`,
+          from_name: "Inks & Needles Website",
+          name: form.name || "Not provided",
+          email: form.email,
+          Preferred_Artist: form.artist || "No preference",
+          Style: form.style || "Not specified",
+          Placement: form.placement || "Not specified",
+          Details: form.details,
+        }),
       });
-      if (res.ok) {
+      const result = await res.json();
+      if (res.ok && result.success) {
         setStatus("success");
       } else {
+        console.error("Web3Forms Error:", result);
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
+      console.error("Fetch Error:", err);
       setStatus("error");
     }
   };
