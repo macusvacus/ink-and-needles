@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 const faqs = [
   {
     q: "How much does a tattoo cost?",
-    a: "Pricing varies by artist, size, placement, and complexity. Our artists start at $150 for small pieces. We provide a custom quote during your free consultation.",
+    a: "Pricing varies by artist, size, placement, and complexity. Our artists start at $50 for small pieces. We provide a custom quote during your free consultation.",
   },
   {
     q: "Do I need to put down a deposit?",
