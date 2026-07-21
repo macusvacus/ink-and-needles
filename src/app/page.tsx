@@ -113,7 +113,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold uppercase tracking-tight mb-4">Frequently Asked Questions</h2>
               <p className="text-zinc-500">Everything you need to know before your appointment.</p>
             </div>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion className="w-full">
               {faqs.map((faq, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-zinc-800">
                   <AccordionTrigger className="text-left text-lg font-medium hover:text-zinc-300">
