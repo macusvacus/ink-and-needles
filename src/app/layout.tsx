@@ -41,7 +41,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-hidden w-full relative">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
